@@ -1,0 +1,58 @@
+.loader {
+  display: inline-block !important;
+  width: 4px !important;
+  height: 86px !important;
+  background: #fff;
+  margin: auto;
+  position: relative;
+  animation: shake 1s linear infinite alternate, lightup 1s linear infinite;
+  transform-origin: 0 0;
+  cursor: pointer;
+  &:hover {
+    background: #fffbeb;
+  }
+}
+
+.loader:hover::before {
+  height: 40px;
+  border: 5px solid #fffbeb;
+  top: 97%;
+}
+.loader::before {
+  content: "";
+  transition: 1s;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 5px solid #ff3d00;
+  border-top: none;
+  border-radius: 0 0 20px 20px;
+  &:hover {
+    background: black;
+    height: 200px;
+  }
+}
+.loader::after {
+  content: "";
+  left: 50%;
+  bottom: 0;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 32px;
+  border-radius: 50px 50px 0 0;
+  background: #fff;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
