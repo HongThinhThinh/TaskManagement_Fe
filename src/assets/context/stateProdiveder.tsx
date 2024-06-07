@@ -4,7 +4,9 @@ const StateContext = createContext();
 
 export const StateProvider = ({ children }) => {
   const [data, setData] = useState([]);
-  const [isLighting, setIsLighting] = useState([]);
+  const [isLighting, setIsLighting] = useState(() => {
+    return JSON.parse(localStorage.getItem("isLighting")) || false;
+  });
 
   const state = {
     data,

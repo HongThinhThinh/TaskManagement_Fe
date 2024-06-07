@@ -1,6 +1,6 @@
 import "./index.scss";
-function Light() {
-  return <span id="light" className="loader"></span>;
+function Light({ onClick }) {
+  return <span onClick={onClick} id="light" className="loader"></span>;
 }
 
 export default Light;

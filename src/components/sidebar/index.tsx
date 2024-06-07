@@ -7,14 +7,16 @@ import Light from "../light";
 import Form from "../form";
 import { useState } from "react";
 
-function Sidebar() {
+function Sidebar({ setIsLighting, isLighting }) {
   const [isOpen, setIsOpen] = useState(false);
-
+  const handleChangeBg = () => {
+    setIsLighting(!isLighting);
+  };
   return (
     <div className="mt-0">
       <div className="sideBar flex justify-center items-center flex-col">
         <div className="mb-7">
-          <Light />
+          <Light onClick={handleChangeBg} />
         </div>
         <div>
           <ul>
