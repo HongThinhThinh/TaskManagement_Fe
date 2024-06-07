@@ -1,0 +1,90 @@
+.toDo {
+  &__right {
+    width: 78%;
+    height: 90vh;
+    background-color: #ffffff2b;
+    border-radius: 20px;
+    margin-right: 50px;
+    border-radius: 21px;
+    box-shadow: 3px 1px 5px 3px #ffffff54;
+    &__wrap {
+      width: 100%;
+      height: 100%;
+      &__top {
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h1 {
+          font-size: 27px;
+          font-weight: 600;
+          color: white;
+        }
+        &--right {
+          width: 60%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          //   input {
+          //     width: auto;
+          //     padding: 5px;
+          //     font-size: 20px;
+          //     border-radius: 10px;
+          //     padding-right: 40px;
+          //   }
+          img {
+            width: 50px;
+            margin-left: 10px;
+            margin-top: -21px;
+          }
+        }
+      }
+      &__note {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .card {
+          width: 33.33%;
+          border-radius: 2px;
+          .card-body {
+            color: white;
+            background-color: #0f123f;
+            position: relative;
+            .important {
+              position: absolute;
+              top: 2%;
+              right: -35%;
+              transform: translate(-50%, -50%);
+            }
+            .card-text {
+              text-align: center;
+            }
+            .bot {
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+              a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                span {
+                  margin-top: 4px;
+                  padding: 0 3px;
+                }
+              }
+            }
+            .time {
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+              position: relative;
+              z-index: 1;
+              margin-top: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

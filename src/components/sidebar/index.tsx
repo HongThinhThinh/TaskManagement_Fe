@@ -11,7 +11,7 @@ function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="mt-9">
+    <div className="mt-0">
       <div className="sideBar flex justify-center items-center flex-col">
         <div className="mb-7">
           <Light />
